@@ -63,3 +63,10 @@
 /zuul/zuul-first/.gitignore
 /zuul/zuul-first/mvnw
 /zuul/zuul-first/mvnw.cmd
+/zuul/zuul-filter/.mvn
+/zuul/zuul-filter/.gitignore
+/zuul/zuul-filter/mvnw
+/zuul/zuul-filter/mvnw.cmd
+/zuul/zuul-filter/src/test
+/zuul/zuul-filter/src/main/resources/static
+/zuul/zuul-filter/src/main/resources/templates
