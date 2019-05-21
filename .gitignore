@@ -56,3 +56,10 @@
 /spring-cloud-config/config-server/.gitignore
 /spring-cloud-config/config-server/mvnw
 /spring-cloud-config/config-server/mvnw.cmd
+/zuul/zuul-first/.mvn
+/zuul/zuul-first/src/test
+/zuul/zuul-first/src/main/resources/templates
+/zuul/zuul-first/src/main/resources/static
+/zuul/zuul-first/.gitignore
+/zuul/zuul-first/mvnw
+/zuul/zuul-first/mvnw.cmd
