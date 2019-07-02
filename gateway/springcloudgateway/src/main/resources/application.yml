@@ -1,0 +1,13 @@
+server:
+  port: 8080
+#配置了一个id为neo_rote的转发规则将本地/spring-cloud转发到url
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: neo_route
+        uri: http://springcloud.fun/
+        predicates:
+        - Path=/spring-cloud
+        #这里是配置匹配方式 gateway内置了多种匹配方式 时间 cookie header host method path 请求参数 ip 可结合使用
+        - Method=GET
