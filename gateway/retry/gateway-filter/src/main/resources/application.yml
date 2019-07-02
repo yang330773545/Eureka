@@ -1,0 +1,27 @@
+server:
+  port: 8888
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: retry_test
+        uri: lb://spring-cloud-producer
+        predicates:
+        - Path=/retry
+        filters:
+        - name: Retry
+          args:
+                                    #重试次数，默认值是 3 次
+            retries: 3
+            #HTTP 的状态返回码，取值请参考：org.springframework.http.HttpStatus
+            statuses: BAD_GATEWAY
+            #methods：指定哪些方法的请求需要进行重试逻辑，默认值是 GET 方法，取值参考：org.springframework.http.HttpMethod
+             #series：一些列的状态码配置，取值参考：org.springframework.http.HttpStatus.Series。符合的某段状态码才会进行重试逻辑，默认值是 SERVER_ERROR，值是 5，也就是 5XX(5 开头的状态码)，共有5 个值。
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
+#调整相 gateway 包的 log 级别，以便排查问题
+logging:
+  level:
+    org.springframework.cloud.gateway: debug

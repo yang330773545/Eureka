@@ -1,0 +1,28 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: cloud-gateway-eureka
+  #是否与服务注册于发现组件进行结合，通过 serviceId 转发到具体的服务实例。默认为 false，设为 true 便开启通过服务中心的自动根据 serviceId 创建路由的功能。
+  cloud:
+    gateway:
+     discovery:
+        locator:
+         enabled: true
+     routes:
+     - id: nameRoot
+       uri: lb://eurekaclient-producer
+       #StripPrefix当请求路径匹配到/name/**会将包含name和后边的字符串接去掉转发， StripPrefix=2就代表截取路径的个数，这样配置后当请求/name/bar/foo后端匹配到的请求路径就会变成http://nameservice/foo
+       #PrefixPath正好相反添加一部分前缀
+       filters:
+       - StripPrefix=2
+       predicates:
+       - Path=/name/**
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
+#调整相 gateway 包的 log 级别，以便排查问题
+logging:
+  level:
+    org.springframework.cloud.gateway: debug
