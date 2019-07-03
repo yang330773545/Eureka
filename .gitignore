@@ -106,3 +106,15 @@
 /gateway/retry/gateway-filter/.gitignore
 /gateway/retry/gateway-filter/mvnw
 /gateway/retry/gateway-filter/mvnw.cmd
+/zipkin/eurekaserver/.mvn
+/zipkin/eurekaserver/.gitignore
+/zipkin/eurekaserver/mvnw
+/zipkin/eurekaserver/mvnw.cmd
+/zipkin/zipkin-customer/.mvn
+/zipkin/zipkin-customer/.gitignore
+/zipkin/zipkin-customer/mvnw
+/zipkin/zipkin-customer/mvnw.cmd
+/zipkin/zipkin-producer/.mvn
+/zipkin/zipkin-producer/.gitignore
+/zipkin/zipkin-producer/mvnw
+/zipkin/zipkin-producer/mvnw.cmd
