@@ -118,3 +118,17 @@
 /zipkin/zipkin-producer/.gitignore
 /zipkin/zipkin-producer/mvnw
 /zipkin/zipkin-producer/mvnw.cmd
+/examplespringcloudoauth/.idea
+/examplespringcloudoauth/examplespringcloudoauth.iml
+/examplespringcloudoauth/eureka-server/.mvn
+/examplespringcloudoauth/eureka-server/.gitignore
+/examplespringcloudoauth/eureka-server/mvnw
+/examplespringcloudoauth/eureka-server/mvnw.cmd
+/examplespringcloudoauth/oauth-service/.mvn
+/examplespringcloudoauth/oauth-service/.gitignore
+/examplespringcloudoauth/oauth-service/mvnw
+/examplespringcloudoauth/oauth-service/mvnw.cmd
+/examplespringcloudoauth/user-service/.mvn
+/examplespringcloudoauth/user-service/.gitignore
+/examplespringcloudoauth/user-service/mvnw
+/examplespringcloudoauth/user-service/mvnw.cmd
