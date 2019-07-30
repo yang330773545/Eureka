@@ -44,4 +44,10 @@ public class UserService {
 
         return dto;
     }
+
+    //grant_type=refresh_token&refresh_token=fbde81ee-f419-42b1-1234-9191f1f95be9&client_id=demoClientId&client_secret=demoClientSecret
+    public JWT refreshToken(String token){
+        JWT jwt = client.getToken("Basic dXNlci1zZXJ2aWNlOjEyMzQ1Ng==","refresh_token",token);
+        return jwt;
+    }
 }

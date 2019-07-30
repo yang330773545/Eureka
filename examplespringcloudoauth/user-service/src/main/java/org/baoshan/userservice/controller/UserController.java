@@ -1,5 +1,6 @@
 package org.baoshan.userservice.controller;
 
+import org.baoshan.userservice.entity.ao.JWT;
 import org.baoshan.userservice.entity.po.User;
 import org.baoshan.userservice.entity.dto.UserLoginDTO;
 import org.baoshan.userservice.service.UserService;
@@ -27,6 +28,10 @@ public class UserController {
     @PostMapping ("/login")
     public UserLoginDTO login(@RequestParam ("username")String username, @RequestParam ("password")String password){
         return userService.login(username, password);
+    }
+    @PostMapping("/ refresh")
+    public JWT refreshToken(@RequestParam("token") String token){
+        return  userService.refreshToken(token);
     }
 
 
